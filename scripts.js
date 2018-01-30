@@ -57,6 +57,11 @@ function refreshIt() {
 //Game Over State
 function gameOver() {
     //alert("Game Over! \n\nYou had a score of: " + score);
+    if (score === 1) {
+    document.body.children[1].children[1].innerText = "You scored " + score + " point!"   
+    } else {
+    document.body.children[1].children[1].innerText = "You scored " + score + " points!"
+    }
     $("#game").hide();
     $("#end").show();
     againButton.addEventListener('click', refreshIt);
