@@ -1,6 +1,7 @@
 body {
     background-color: antiquewhite;
     margin-top: 100px;
+    min-width: 1000px;
 }
 
 .center {
@@ -29,6 +30,11 @@ button {
     
 }
 
+#score {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 120px 0 0;
+}
+
 #score-box {
     height: 25px;
     width: 50px;
@@ -44,6 +50,7 @@ button {
 #score-letters {
     height: 50px 50px 10px 50px;
     width: 50px;
+    color: whitesmoke;
     text-align: center;
     display: block;
 }
