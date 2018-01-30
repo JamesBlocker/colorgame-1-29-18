@@ -68,7 +68,6 @@ function redButtonPress() {
         score++;
     } else {
         strike++;
-        scoreUpdate();
     }
     scoreUpdate();
     if (strike >= 3) {
@@ -82,7 +81,6 @@ function blueButtonPress() {
         score++;
     } else {
         strike++;
-        scoreUpdate();
     }
     scoreUpdate();
     if (strike >= 3) {
@@ -96,7 +94,6 @@ function greenButtonPress() {
         score++;
     } else {
         strike++;
-        scoreUpdate();
     }
     scoreUpdate();
     if (strike >= 3) {
