@@ -14,16 +14,27 @@ function randomInt(n){
 
 //buttons hooked up
 var redButton = document.querySelector('#redBtn');
-redButton.addEventListener('click', tested);
+redButton.addEventListener('click', buttonPress);
 var blueButton = document.querySelector('#blueBtn');
-blueButton.addEventListener('click', tested);
+blueButton.addEventListener('click', buttonPress);
 var greenButton = document.querySelector('#greenBtn');
-greenButton.addEventListener('click', tested);
+greenButton.addEventListener('click', buttonPress);
 
 var colorArr = ["Red", "Green", "Blue"];
 
 var displayWord = document.querySelector('#main-box')
-displayWord.innerText = colorArr[2]
+
+//game start state
+var startColorNum = randomInt(3);
+var startBackgroundColorNum = randomInt(3);
+displayWord.innerText = colorArr[startColorNum]
+document.body.children[1].style.background = colorArr[startBackgroundColorNum]
 
 //button press
-var colorNum = randomInt(2);
+function buttonPress() {
+    var colorNum = randomInt(3);
+    var backgroundColorNum = randomInt(3);
+    displayWord.innerText = colorArr[colorNum]
+    document.body.children[1].style.background = colorArr[backgroundColorNum]
+}
+
