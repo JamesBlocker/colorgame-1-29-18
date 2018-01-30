@@ -4,14 +4,50 @@ body {
     min-width: 1000px;
 }
 
+button {
+    height: 50px;
+    width: 150px;
+}
+
 .center {
     text-align: center;
     padding: 50 auto;
 }
 
-button {
-    height: 50px;
-    width: 150px;
+.instructions {
+    text-align: center;
+    margin: 20px 250px;
+    font-size: 18px;
+    color: whitesmoke;
+}
+
+.outlined {
+    border: 2px solid black;
+    font-weight: bold;
+    background-color: whitesmoke;
+}
+
+#again {
+    font-size: 25px;
+}
+
+#blueBtn {
+    font-size: 25px;
+    color: blue;
+}
+
+#end {
+    display: none;
+    text-align: center;
+}
+
+#end h1 {
+    font-family: 'Rammetto One', cursive;
+}
+
+#greenBtn {
+    font-size: 25px;
+    color: green;
 }
 
 #main-box {
@@ -24,11 +60,42 @@ button {
     font-size: 100px;
     border: 2px solid black;
     text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
     
+}
+
+#redBtn {
+    font-size: 25px;
+    color: red;
+}
+
+#score {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 120px 0 0;
+    float: right;
+}
+
+#score-box {
+    height: 25px;
+    width: 50px;
+    background-color:black;
+    color: whitesmoke;
+    display: inline-block;
+    text-align: center;
+    padding-top: 6px;
+    padding-bottom: 14px;
+    font-size: 35px;
+}
+
+#score-letters {
+    height: 50px 50px 10px 50px;
+    width: 50px;
+    color: whitesmoke;
+    text-align: center;
+    display: block;
 }
 
 #strike {
@@ -56,32 +123,7 @@ button {
     color: whitesmoke;
     text-align: center;
     display: block;
-}
-
-#score {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0 120px 0 0;
-    float: right;
-}
-
-#score-box {
-    height: 25px;
-    width: 50px;
-    background-color:black;
-    color: whitesmoke;
-    display: inline-block;
-    text-align: center;
-    padding-top: 6px;
-    padding-bottom: 14px;
-    font-size: 35px;
-}
-
-#score-letters {
-    height: 50px 50px 10px 50px;
-    width: 50px;
-    color: whitesmoke;
-    text-align: center;
-    display: block;
+<<<<<<< HEAD
 }
 
 #redBtn {
@@ -125,4 +167,6 @@ button {
     color: whitesmoke;
     min-width: 520px;
     max-width: 520px;
+=======
+>>>>>>> 9d9578d7f871c118b7c1b9da9834de08a179257b
 }
