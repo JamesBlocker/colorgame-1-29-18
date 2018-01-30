@@ -120,7 +120,9 @@ button {
 
 .instructions {
     text-align: center;
-    margin: 20px 250px;
+    margin: 20px auto;
     font-size: 18px;
     color: whitesmoke;
+    min-width: 520px;
+    max-width: 520px;
 }
