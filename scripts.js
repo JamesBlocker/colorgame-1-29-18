@@ -31,8 +31,8 @@ var startBackgroundColorNum = randomInt(3);
 var colorNum = randomInt(3);
 var bodyColorNum = randomInt(3);
 displayWord.innerText = colorArr[startNameNum];
-document.body.children[1].style.background = colorArr[startBackgroundColorNum];
-document.body.children[1].style.color = colorArr[colorNum];
+document.body.children[2].style.background = colorArr[startBackgroundColorNum];
+document.body.children[2].style.color = colorArr[colorNum];
 document.body.style.background = colorArr[bodyColorNum];
 
 //colorChange
@@ -42,8 +42,8 @@ function colorChange() {
     var colorNum = randomInt(3);
     var bodyColorNum = randomInt(3);
     displayWord.innerText = colorArr[colorNameNum];
-    document.body.children[1].style.background = colorArr[backgroundColorNum];
-    document.body.children[1].style.color = colorArr[colorNum];
+    document.body.children[2].style.background = colorArr[backgroundColorNum];
+    document.body.children[2].style.color = colorArr[colorNum];
     document.body.style.background = colorArr[bodyColorNum];
 }
 
@@ -55,6 +55,7 @@ function gameOver() {
 //Score update
 function scoreUpdate() {
     document.body.children[0].children[1].innerText = score;
+    document.body.children[1].children[1].innerText = strike;
 }
 
 //button presses
@@ -67,12 +68,12 @@ function redButtonPress() {
         score++;
     } else {
         strike++;
-    }
-
-    if (strike >= 3) {
-        gameOver()
+        scoreUpdate();
     }
     scoreUpdate();
+    if (strike >= 3) {
+       gameOver();
+    } 
     colorChange();
 }
 
@@ -81,12 +82,12 @@ function blueButtonPress() {
         score++;
     } else {
         strike++;
+        scoreUpdate();
     }
-
+    scoreUpdate();
     if (strike >= 3) {
         gameOver()
     }
-    scoreUpdate();
     colorChange();
 }
 
@@ -95,12 +96,12 @@ function greenButtonPress() {
         score++;
     } else {
         strike++;
+        scoreUpdate();
     }
-
+    scoreUpdate();
     if (strike >= 3) {
         gameOver()
     }
-    scoreUpdate();
     colorChange();
 }
 
