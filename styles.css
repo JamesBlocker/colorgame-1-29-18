@@ -8,6 +8,7 @@ body {
     text-align: center;
     padding: 50 auto;
 }
+
 button {
     height: 50px;
     width: 150px;
@@ -76,4 +77,6 @@ button {
 
 .outlined {
     border: 2px solid black;
+    font-weight: bold;
+    background-color: whitesmoke;
 }
