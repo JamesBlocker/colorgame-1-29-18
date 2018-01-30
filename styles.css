@@ -1,0 +1,38 @@
+body {
+    background-color: antiquewhite;
+}
+
+.center {
+    text-align: center;
+    padding: 50 auto;
+}
+button {
+    height: 50px;
+    width: 150px;
+}
+
+.main-box {
+    height: 200px;
+    width: 400px;
+    background-color: aquamarine;
+    margin: 25px auto;
+    padding: 50px;
+}
+
+#score-box {
+    height: 50px;
+    width: 50px;
+    background-color: gray;
+    display: inline-block;
+}
+
+#score-letters {
+    height: 50px;
+    width: 50px;
+    
+    display: block;
+}
+
+#score {
+    float: right;
+}

@@ -5,18 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="main-box"></div>
-    <div class="button-box">
-        <button id="redBtn"></button>
-        <button id="blueBtn"></button>
-        <button id="green"></button>
+    <div id="score">
+        <div id="score-letters">Score:</div>
+        <div id="score-box">0</div>
+    </div>
+    
+    <div class="main-box center"></div>
+    
+    <div class="button-box center">
+        <button id="redBtn">RED</button>
+        <button id="blueBtn">BLUE</button>
+        <button id="green">GREEN</button>
     </div>
 
     <script>
     
-    
+    function randomInt(n){
+            return Math.floor(Math.random() * n)
+        }
     
     
     </script>
