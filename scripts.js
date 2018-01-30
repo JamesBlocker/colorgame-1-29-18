@@ -21,15 +21,26 @@ var greenButton = document.querySelector('#greenBtn');
 greenButton.addEventListener('click', greenButtonPress);
 var againButton = document.querySelector('#again');
 
+//keys pressed
+window.addEventListener("keydown", checkKeyPressed, false);
 
+function checkKeyPressed(evt) {
+    if (evt.keyCode == "65") {
+        redButtonPress();
+    } else if (evt.keyCode == "83") {
+        blueButtonPress();
+    } else if (evt.keyCode == "68") {
+        blueButtonPress();
+    }
+}
+
+//game start state
 var colorArr = ["Red", "Green", "Blue"];
 var score = 0;
 var strike = 3;
 var displayWord = document.querySelector('#main-box');
 var gameScreen = document.querySelector('#game');
 var end = document.querySelector('#end');
-
-//game start state
 var startNameNum = randomInt(3);
 var startBackgroundColorNum = randomInt(3);
 var colorNum = randomInt(3);
