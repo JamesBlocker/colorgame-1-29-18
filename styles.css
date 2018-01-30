@@ -16,7 +16,9 @@ button {
     width: 400px;
     background-color: aquamarine;
     margin: 25px auto;
-    padding: 50px;
+    padding: 70px 50px 0px 50px;
+    font-size: 100px;
+    
 }
 
 #score-box {
@@ -35,4 +37,16 @@ button {
 
 #score {
     float: right;
+}
+
+#redBtn {
+    font-size: 25px;
+}
+
+#blueBtn {
+    font-size: 25px;
+}
+
+#greenBtn {
+    font-size: 25px;
 }
