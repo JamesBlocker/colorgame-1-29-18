@@ -104,3 +104,16 @@ button {
     font-weight: bold;
     background-color: whitesmoke;
 }
+
+#end {
+    display: none;
+    text-align: center;
+}
+
+#end h1 {
+    font-family: 'Rammetto One', cursive;
+}
+
+#again {
+    font-size: 25px;
+}
