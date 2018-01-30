@@ -1,9 +1,3 @@
-// document.body.style.background = 'green';
-// }
-
-// var greenBtn = document.querySelector('#green');
-// greenBtn.addEventListener('click', hulk);
-
 function tested() {
     console.log('tested');
 }
@@ -22,17 +16,20 @@ greenButton.addEventListener('click', greenButtonPress);
 var againButton = document.querySelector('#again');
 
 //keys pressed
-window.addEventListener("keydown", checkKeyPressed, false);
+// window.addEventListener("keydown", checkKeyPressed, false);
 
-function checkKeyPressed(evt) {
-    if (evt.keyCode == "65") {
-        redButtonPress();
-    } else if (evt.keyCode == "83") {
-        blueButtonPress();
-    } else if (evt.keyCode == "68") {
-        blueButtonPress();
-    }
-}
+// function checkKeyPressed(evt) {
+//     if (evt.keyCode == "65") {
+//         redButtonPress();
+//     } else if (evt.keyCode == "83") {
+//         blueButtonPress();
+//     } else if (evt.keyCode == "68") {
+//         greenButtonPress();
+//     } 
+//     else if (evt.keyCode == "13") {
+//         refreshIt();
+//     }
+// }
 
 //game start state
 var colorArr = ["Red", "Green", "Blue"];
@@ -118,9 +115,9 @@ function blueButtonPress() {
 
 function greenButtonPress() {
     if (displayWord.innerText === "Green") {
-        score--;
+        score++;
     } else {
-        strike++;
+        strike--;
     }
     scoreUpdate();
     if (strike === 0) {
