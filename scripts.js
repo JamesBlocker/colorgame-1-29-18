@@ -16,20 +16,19 @@ greenButton.addEventListener('click', greenButtonPress);
 var againButton = document.querySelector('#again');
 
 //keys pressed
-// window.addEventListener("keydown", checkKeyPressed, false);
+window.addEventListener("keydown", checkKeyPressed, false);
 
-// function checkKeyPressed(evt) {
-//     if (evt.keyCode == "65") {
-//         redButtonPress();
-//     } else if (evt.keyCode == "83") {
-//         blueButtonPress();
-//     } else if (evt.keyCode == "68") {
-//         greenButtonPress();
-//     } 
-//     else if (evt.keyCode == "13") {
-//         refreshIt();
-//     }
-// }
+function checkKeyPressed(evt) {
+    if (evt.keyCode == "65") {
+        redButtonPress();
+    } else if (evt.keyCode == "83") {
+        blueButtonPress();
+    } else if (evt.keyCode == "68") {
+        greenButtonPress();
+    } else if (evt.keyCode == "13") {
+        refreshIt();
+    }
+}
 
 //game start state
 var colorArr = ["Red", "Green", "Blue"];
