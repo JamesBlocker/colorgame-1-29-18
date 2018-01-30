@@ -16,9 +16,9 @@ function randomInt(n){
 var redButton = document.querySelector('#redBtn');
 redButton.addEventListener('click', redButtonPress);
 var blueButton = document.querySelector('#blueBtn');
-blueButton.addEventListener('click', buttonPress);
+blueButton.addEventListener('click', blueButtonPress);
 var greenButton = document.querySelector('#greenBtn');
-greenButton.addEventListener('click', buttonPress);
+greenButton.addEventListener('click', greenButtonPress);
 
 var colorArr = ["Red", "Green", "Blue"];
 var score = 0;
@@ -29,18 +29,22 @@ var displayWord = document.querySelector('#main-box')
 var startNameNum = randomInt(3);
 var startBackgroundColorNum = randomInt(3);
 var colorNum = randomInt(3);
+var bodyColorNum = randomInt(3);
 displayWord.innerText = colorArr[startNameNum];
 document.body.children[1].style.background = colorArr[startBackgroundColorNum];
 document.body.children[1].style.color = colorArr[colorNum];
+document.body.style.background = colorArr[bodyColorNum];
 
 //colorChange
 function colorChange() {
     var colorNameNum = randomInt(3);
     var backgroundColorNum = randomInt(3);
     var colorNum = randomInt(3);
+    var bodyColorNum = randomInt(3);
     displayWord.innerText = colorArr[colorNameNum];
     document.body.children[1].style.background = colorArr[backgroundColorNum];
     document.body.children[1].style.color = colorArr[colorNum];
+    document.body.style.background = colorArr[bodyColorNum];
 }
 
 //Game Over State
@@ -53,13 +57,41 @@ function scoreUpdate() {
     document.body.children[0].children[1].innerText = score;
 }
 
-//button press
+//button presses
 function buttonPress() {
     colorChange();  
 }
 
 function redButtonPress() {
     if (displayWord.innerText === "Red") {
+        score++;
+    } else {
+        strike++;
+    }
+
+    if (strike >= 3) {
+        gameOver()
+    }
+    scoreUpdate();
+    colorChange();
+}
+
+function blueButtonPress() {
+    if (displayWord.innerText === "Blue") {
+        score++;
+    } else {
+        strike++;
+    }
+
+    if (strike >= 3) {
+        gameOver()
+    }
+    scoreUpdate();
+    colorChange();
+}
+
+function greenButtonPress() {
+    if (displayWord.innerText === "Green") {
         score++;
     } else {
         strike++;

@@ -1,5 +1,6 @@
 body {
     background-color: antiquewhite;
+    margin-top: 100px;
 }
 
 .center {
@@ -14,10 +15,12 @@ button {
 #main-box {
     height: 200px;
     width: 400px;
+    font-family: 'Rammetto One', cursive;
     background-color: aquamarine;
     margin: 25px auto;
     padding: 70px 50px 0px 50px;
     font-size: 100px;
+    border: 2px solid black;
     text-shadow:
 		-1px -1px 0 #000,
 		1px -1px 0 #000,
@@ -27,16 +30,21 @@ button {
 }
 
 #score-box {
-    height: 50px;
+    height: 25px;
     width: 50px;
-    background-color: gray;
+    background-color:black;
+    color: whitesmoke;
     display: inline-block;
+    text-align: center;
+    padding-top: 6px;
+    padding-bottom: 14px;
+    font-size: 35px;
 }
 
 #score-letters {
-    height: 50px;
+    height: 50px 50px 10px 50px;
     width: 50px;
-    
+    text-align: center;
     display: block;
 }
 
@@ -51,8 +59,14 @@ button {
 
 #blueBtn {
     font-size: 25px;
+    color: blue;
 }
 
 #greenBtn {
     font-size: 25px;
+    color: green;
+}
+
+.outlined {
+    border: 2px solid black;
 }
