@@ -2,6 +2,7 @@ function tested() {
     console.log('tested');
 }
 
+//establish numbers
 function randomInt(n){
     return Math.floor(Math.random() * n)
 }
@@ -59,10 +60,11 @@ function colorChange() {
     document.body.style.background = colorArr[bodyColorNum];
 }
 
+//Game Over State
 function refreshIt() {
     window.location.reload()
 }
-//Game Over State
+
 function gameOver() {
     //alert("Game Over! \n\nYou had a score of: " + score);
     if (score === 1) {
@@ -81,11 +83,7 @@ function scoreUpdate() {
     document.body.children[0].children[1].children[1].innerText = strike;
 }
 
-//button presses
-function buttonPress() {
-    colorChange();  
-}
-
+//button presses and assesment
 function redButtonPress() {
     if (displayWord.innerText === "Red") {
         score++;
