@@ -117,3 +117,10 @@ button {
 #again {
     font-size: 25px;
 }
+
+.instructions {
+    text-align: center;
+    margin: 20px 250px;
+    font-size: 18px;
+    color: whitesmoke;
+}

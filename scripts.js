@@ -24,7 +24,7 @@ var againButton = document.querySelector('#again');
 
 var colorArr = ["Red", "Green", "Blue"];
 var score = 0;
-var strike = 0;
+var strike = 3;
 var displayWord = document.querySelector('#main-box');
 var gameScreen = document.querySelector('#game');
 var end = document.querySelector('#end');
@@ -38,6 +38,7 @@ displayWord.innerText = colorArr[startNameNum];
 document.body.children[0].children[2].style.background = colorArr[startBackgroundColorNum];
 document.body.children[0].children[2].style.color = colorArr[colorNum];
 document.body.style.background = colorArr[bodyColorNum];
+scoreUpdate();
 
 //colorChange
 function colorChange() {
@@ -82,10 +83,10 @@ function redButtonPress() {
     if (displayWord.innerText === "Red") {
         score++;
     } else {
-        strike++;
+        strike--;
     }
     scoreUpdate();
-    if (strike >= 3) {
+    if (strike === 0) {
        gameOver();
     } 
     colorChange();
@@ -95,10 +96,10 @@ function blueButtonPress() {
     if (displayWord.innerText === "Blue") {
         score++;
     } else {
-        strike++;
+        strike--;
     }
     scoreUpdate();
-    if (strike >= 3) {
+    if (strike === 0) {
         gameOver()
     }
     colorChange();
@@ -106,12 +107,12 @@ function blueButtonPress() {
 
 function greenButtonPress() {
     if (displayWord.innerText === "Green") {
-        score++;
+        score--;
     } else {
         strike++;
     }
     scoreUpdate();
-    if (strike >= 3) {
+    if (strike === 0) {
         gameOver()
     }
     colorChange();
