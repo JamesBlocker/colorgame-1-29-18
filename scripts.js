@@ -1,12 +1,3 @@
-function tested() {
-    console.log('tested');
-}
-
-//establish numbers
-function randomInt(n){
-    return Math.floor(Math.random() * n)
-}
-
 //buttons hooked up
 var redButton = document.querySelector('#redBtn');
 redButton.addEventListener('click', redButtonPress);
@@ -18,7 +9,6 @@ var againButton = document.querySelector('#again');
 
 //keys pressed
 window.addEventListener("keydown", checkKeyPressed, false);
-
 function checkKeyPressed(evt) {
     if (evt.keyCode == "65") {
         redButtonPress();
@@ -29,6 +19,11 @@ function checkKeyPressed(evt) {
     } else if (evt.keyCode == "13") {
         refreshIt();
     }
+}
+
+//establish numbers
+function randomInt(n){
+    return Math.floor(Math.random() * n)
 }
 
 //game start state
