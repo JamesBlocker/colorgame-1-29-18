@@ -1,11 +1,11 @@
 //buttons hooked up
-var redButton = document.querySelector('#redBtn');
-redButton.addEventListener('click', redButtonPress);
-var blueButton = document.querySelector('#blueBtn');
-blueButton.addEventListener('click', blueButtonPress);
-var greenButton = document.querySelector('#greenBtn');
-greenButton.addEventListener('click', greenButtonPress);
-var againButton = document.querySelector('#again');
+var redButton = $('#redBtn');
+redButton.on('click', redButtonPress);
+var blueButton = $('#blueBtn');
+blueButton.on('click', blueButtonPress);
+var greenButton = $('#greenBtn');
+greenButton.on('click', greenButtonPress);
+var againButton = $('#again');
 
 //keys pressed
 window.addEventListener("keydown", checkKeyPressed, false);
@@ -69,7 +69,7 @@ function gameOver() {
     }
     $("#game").hide();
     $("#end").show();
-    againButton.addEventListener('click', refreshIt);
+    againButton.on('click', refreshIt);
 }
 
 //Score update
